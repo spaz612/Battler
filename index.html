@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <!-- iPad Portrait -->
+  <link href="/defaults/apple-touch-startup-image-1536x2008.png"
+        media="(device-width: 768px) and (device-height: 1024px)"
+        rel="apple-touch-startup-image">
+  <!-- iPad Landscape -->
+  <link href="/defaults/apple-touch-startup-image-2048x1496.png"
+        media="(device-width: 1024px) and (device-height: 768px)"
+        rel="apple-touch-startup-image">
+
+  <Title>Battle App</Title>
+</head>
+<body>
+
+  <!-- Graphics display space -->
+  <div id="display">
+    <div id="screen" class="display">
+      <canvas id="background" class="display screen" width="640" height="480"></canvas>
+      <canvas id="bottom-layer" class="display screen" width="640" height="480"></canvas>
+      <canvas id="top-layer" class="display screen" width="640 height="480"></canvas>
+      <canvas id="sprite-layer" class="display screen" width="640" height="480"></canvas>
+    </div>
+    <div id="screen-overlay" class="display">
+      <canvas id="overlay" class="display screen-overlay" width="640" height="480"></canvas>
+    </div>
+    <div id="scratchpad" class="display">
+      <canvas id="scratch-large" class="display scratchpad" width="1280" height="960"></canvas>
+      <canvas id="scratch" class="display scratchpad" width="640" height="480"></canvas>
+    </div>
+  </div>
+  
+</body>
+</html>
