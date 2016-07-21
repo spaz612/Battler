@@ -4,28 +4,28 @@ Interface Driver{
 }
 */
 
-function DisplayDriver(driver){
+function TimeDriver(driver,fps){
   this.driver = driver;
-  this.fps = 50
+  this.fps = fps;
   this.running = false;
   this.context = 0;
 }
 
-DisplayDriver.prototype.start = function(){
+TimeDriver.prototype.start = function(){
   if (!this.running){
     running = true;
     this.context = setInterval(function(){driver.drawFrame();},1000/this.fps);
   }
 };
 
-DisplayDriver.prototype.halt = function(){
+TimeDriver.prototype.halt = function(){
   if (this.running){
     running = false;
     clearInterval(this.context);
   }
 };
 
-DisplayDriver.prototype.changeDriver = function(driver){
+TimeDriver.prototype.changeDriver = function(driver){
   if (this.running){
     clearInterval(this.context);
   }
