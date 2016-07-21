@@ -1,6 +1,6 @@
 /*
 Interface Driver{
-  function drawFrame();
+  function executeStep();
 }
 */
 
@@ -14,7 +14,7 @@ function TimeDriver(driver,fps){
 TimeDriver.prototype.start = function(){
   if (!this.running){
     running = true;
-    this.context = setInterval(function(){driver.drawFrame();},1000/this.fps);
+    this.context = setInterval(function(){driver.executeStep();},1000/this.fps);
   }
 };
 
@@ -31,6 +31,6 @@ TimeDriver.prototype.changeDriver = function(driver){
   }
   this.driver = driver;
   if (this.running){
-    this.context = setInterval(function(){driver.drawFrame();},1000/this.fps);
+    this.context = setInterval(function(){driver.executeStep();},1000/this.fps);
   }
 };
